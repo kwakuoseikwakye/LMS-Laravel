@@ -70,7 +70,13 @@ To log in and obtain an authentication token:
 
 1.  Register a new user by navigating to /register in your browser.
     
-2.  **Request:**`POST /api/sanctum/token`**Request Body (JSON):**`json { "email": "user@example.com", "password": "your_password", "device_name": "your_device_name"}`**Response:**`json { "token": "your_api_token"}`Use the generated token for authenticated API requests by including it in the Authorization header:`Authorization: Bearer your_api_token`
+2.  **Request:**`POST /api/sanctum/token`
+    
+**Request Body (JSON):**`json { "email": "user@example.com", "password": "your_password", "name": "user_name"}`
+    
+**Response:**`json { "access_token": "your_api_token"}`
+    
+Use the generated token for authenticated API requests by including it in the Authorization header:`Authorization: Bearer your_api_token`
     
 
 ### 2\. Managing Books
